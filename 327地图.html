@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>地图多地点标注跳转</title>
+
+</head>
+<body>
+<style type="text/css">
+    #map {
+        height: 600px;
+        width: 100%;
+    }
+</style>
+<div id="map"></div>
+<script src="https://map.qq.com/api/js?v=2.exp&key=YNRBZ-KJQCM-QRI66-6XCDH-CMFA7-AHFH5"></script>
+<script>
+    function initMap() {
+        // 创建地图实例
+        var map = new qq.maps.Map(document.getElementById("map"), {
+            center: new qq.maps.LatLng(39.949503,116.314895),
+            zoom: 12,
+        });
+
+        //根据图片大小调整 界点
+        var anchor = new qq.maps.Point(0, 39),
+            size = new qq.maps.Size(42, 68),
+            origin = new qq.maps.Point(0, 0),
+            markerIcon = new qq.maps.MarkerImage(
+                "https://apipost.bcdh.com.cn/attach/4399d4f63d1523562f33145934ddd1838",
+            ),
+            markerIcon2 = new qq.maps.MarkerImage(
+                "https://apipost.bcdh.com.cn/attach/45540a9742efe355570a245743d3c41a0",
+            ),
+            markerIcon3 = new qq.maps.MarkerImage(
+                "https://apipost.bcdh.com.cn/attach/418c2420dfba6356133d956a5b6b0f7b9",
+            ),
+            markerIcon4 = new qq.maps.MarkerImage(
+                "https://apipost.bcdh.com.cn/attach/470f73bb1155d3559c3af76404271d28b",
+            ),
+            markerIcon5 = new qq.maps.MarkerImage(
+                "https://apipost.bcdh.com.cn/attach/49dfd54a359d23563a3fab0db21a0f2fc",
+            ),
+            markerIcon6 = new qq.maps.MarkerImage(
+                "https://apipost.bcdh.com.cn/attach/44a68c3e324b63557676ee2a00a36f3d5",
+            ),
+            markerIcon7 = new qq.maps.MarkerImage(
+                "https://apipost.bcdh.com.cn/attach/4dfd73c691398355621b13cbe94cfca9a",
+            ),
+            markerIcon8 = new qq.maps.MarkerImage(
+                "https://apipost.bcdh.com.cn/attach/406a96edc47803560a9caea9afbfee31d",
+            ),
+            markerIcon9 = new qq.maps.MarkerImage(
+                "https://apipost.bcdh.com.cn/attach/44f87d8709e6235582efd2190b3dc4000",
+            )
+        ;
+
+
+        // 创建标注点1
+        var marker1 = new qq.maps.Marker({
+            position: new qq.maps.LatLng(39.99299,116.272362),
+            map: map,
+            icon: markerIcon,
+        });
+
+        // 创建标注点2
+        var marker2 = new qq.maps.Marker({
+            position: new qq.maps.LatLng(39.988242,116.187571),
+            map: map,
+            icon: markerIcon2,
+        });
+
+        // 创建标注点3
+        var marker3 = new qq.maps.Marker({
+            position: new qq.maps.LatLng(39.944071,116.396058),
+            map: map,
+            icon: markerIcon3
+        });
+
+        // 创建标注点4
+        var marker4 = new qq.maps.Marker({
+            position: new qq.maps.LatLng(39.924781,116.367429),
+            map: map,
+            icon: markerIcon4
+        });
+
+        // 创建标注点5
+        var marker5 = new qq.maps.Marker({
+            position: new qq.maps.LatLng(39.949503,116.314895),
+            map: map,
+            icon: markerIcon5
+        });
+
+        // 创建标注点6
+        var marker6 = new qq.maps.Marker({
+            position: new qq.maps.LatLng(39.924646,116.405299),
+            map: map,
+            icon: markerIcon6
+        });
+
+        // 创建标注点7
+        var marker7 = new qq.maps.Marker({
+            position: new qq.maps.LatLng(39.94552,116.38301),
+            map: map,
+            icon: markerIcon7
+        });
+
+        // 创建标注点8
+        var marker8 = new qq.maps.Marker({
+            position: new qq.maps.LatLng(39.935596,116.402406),
+            map: map,
+            icon: markerIcon8
+        });
+
+        // 创建标注点9
+        var marker9 = new qq.maps.Marker({
+            position: new qq.maps.LatLng(39.945216,116.416695),
+            map: map,
+            icon: markerIcon9
+        });
+
+        // 点击标注点时，跳转到对应的链接
+        qq.maps.event.addListener(marker1, 'click', function() {
+
+            window.open("https://yx.bcdh.com.cn/special?id=21");
+            // window.location.href = "https://yx.bcdh.com.cn/";
+        });
+
+        qq.maps.event.addListener(marker2, 'click', function() {
+            window.location.href = "#";
+        });
+
+        qq.maps.event.addListener(marker3, 'click', function() {
+            window.location.href = "#";
+        });
+
+        qq.maps.event.addListener(marker4, 'click', function() {
+            window.location.href = "#";
+        });
+
+        qq.maps.event.addListener(marker5, 'click', function() {
+            window.location.href = "#";
+        });
+
+        qq.maps.event.addListener(marker6, 'click', function() {
+            window.location.href = "#";
+        });
+
+        qq.maps.event.addListener(marker7, 'click', function() {
+            window.location.href = "#";
+        });
+
+        qq.maps.event.addListener(marker8, 'click', function() {
+            window.location.href = "#";
+        });
+
+        qq.maps.event.addListener(marker9, 'click', function() {
+            window.location.href = "#";
+        });
+    }
+
+    // 加载地图
+    initMap();
+</script>
+</body>
+</html>
